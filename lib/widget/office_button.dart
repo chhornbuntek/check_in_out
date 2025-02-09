@@ -1,3 +1,4 @@
+import 'package:app_attendance/widget/time_in_out_total.dart';
 import 'package:flutter/material.dart';
 
 class OfficeButton extends StatelessWidget {
@@ -208,76 +209,9 @@ class OfficeButton extends StatelessWidget {
         ],
         const Divider(),
         const SizedBox(height: 10),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Column(
-                children: [
-                  const Icon(Icons.access_alarm),
-                  const SizedBox(height: 5),
-                  const Text(
-                    '09:05 AM',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-                  ),
-                  Text(
-                    'Check in',
-                    style: TextStyle(
-                      color: Colors.black.withOpacity(0.5),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  const Icon(Icons.alarm_off),
-                  const SizedBox(height: 5),
-                  const Text(
-                    '--:-- PM',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-                  ),
-                  Text(
-                    'Check Out',
-                    style: TextStyle(
-                      color: Colors.black.withOpacity(0.5),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  const Icon(Icons.alarm_on),
-                  const SizedBox(height: 5),
-                  const Text(
-                    '8h 39m',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
-                  ),
-                  Text(
-                    'Total Hrs',
-                    style: TextStyle(
-                      color: Colors.black.withOpacity(0.5),
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+        const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10),
+          child: time_in_out_total(),
         ),
       ],
     );
